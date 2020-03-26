@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,29 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myCat = new Cat(4, "Mira");
-        myCat.talk();
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        myCat.breathe();
-        myCat.numberOfLegs = 6;
-        Log.i("nOL", String.valueOf(myCat.numberOfLegs));
+            }
+        });
 
-        Cat suka = new Cat(20, "Masha");
-        suka.talk();
+        Cat mira = new Lion();
+        mira.talk();
 
-        Cat glasha = new Cat();
-        glasha.age = 5;
-        glasha.name = "asFck";
-        glasha.talk();
-
-        Puma puma = new Puma();
-        puma.breathe();
-        puma.talk();
-        puma.isAlive = true;
-        puma.name = "Leo";
-        Log.i("puma", String.valueOf(puma.isAlive));
-
-        Puma lodka = new Puma();
-        lodka.talk();
     }
 }

@@ -4,8 +4,26 @@ import android.util.Log;
 
 public class Puma extends Cat {
 
-    public void talk() {
+    private String pumaHelloText;
 
-        Log.i("talk()", "RRRRRRRR, my name is " + name + " and i'm " + age + "y.o.");
+    public Puma() {
+
+        this.age = 3;
+        this.name = "Puma";
+        this.pumaHelloText = "I'm a cool cat";
+    }
+
+    public void talk() {
+        Log.i("talk", createPumaTalkText());
+    }
+
+    private String createPumaTalkText() {
+        return (pumaHelloText + " at age " + age + " named " + name);
+    }
+
+    @Override
+    public void draw() {
+
+        Log.i("draw()", "Draw Puma");
     }
 }

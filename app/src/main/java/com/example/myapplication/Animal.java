@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 import android.util.Log;
 
-public class Animal {
+public abstract class Animal {
 
     int numberOfLegs;
     boolean isAlive;
@@ -11,5 +11,8 @@ public class Animal {
 
         Log.i("braethe()", "I can breathe!");
     }
+
+    abstract public void draw();
+
 
 }
